@@ -5,7 +5,7 @@ import Connexion from '../components/ConnexionForm.vue';
 import Register from '../components/RegisterForm.vue';
 import Home from '../Home.vue';
 
-// Définissez les routes
+// Dï¿½finissez les routes
 const routes = [
     {
         path: '/',
@@ -20,14 +20,14 @@ const routes = [
     {
         path: '/register',
         name: 'RegisterPage',
-        component: Register, // Page de création de compte
+        component: Register, // Page de crï¿½ation de compte
     },
 ];
 
-// Créez une instance du router
+// Crï¿½ez une instance du router
 const router = createRouter({
     history: createWebHistory(), // Utilise l'historique du navigateur
-    routes, // Passez les routes définies
+    routes, // Passez les routes dï¿½finies
 });
 
 export default router;

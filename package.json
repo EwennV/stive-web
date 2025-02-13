@@ -8,11 +8,13 @@
     "build": "vite build",
     "serve": "vite preview",
     "electron": "electron .",
-    "start": "concurrently \"npm run electron\""
+    "start": "concurrently \"npm run electron\"",
+    "watch": "npx tailwindcss -i ./src/assets/input.css -o ./src/assets/output.css --watch"
   },
   "main": "main.js",
   "dependencies": {
     "axios": "^1.7.9",
+    "datatables.net-dt": "^2.2.2",
     "vue": "^3.5.12",
     "vue-router": "^4.5.0"
   },

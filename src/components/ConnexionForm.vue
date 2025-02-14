@@ -8,7 +8,7 @@
                 email: "",
                 password: "",
                 errorMessage: "",
-                isLoading: false, // Ajouter une propriété pour gérer l'état de chargement
+                isLoading: false, // Ajouter une propriï¿½tï¿½ pour gï¿½rer l'ï¿½tat de chargement
             };
         },
         methods: {
@@ -16,28 +16,28 @@
                 this.$router.push('/home'); // Navigation vers la page "Home"
             },
             async handleLogin() {
-                // Désactive le bouton pendant la connexion
+                // Dï¿½sactive le bouton pendant la connexion
                 this.isLoading = true;
-                this.errorMessage = ""; // Réinitialiser le message d'erreur
+                this.errorMessage = ""; // Rï¿½initialiser le message d'erreur
 
-                // Préparer les données de connexion
+                // Prï¿½parer les donnï¿½es de connexion
                 const loginData = {
                     email: this.email,
                     password: this.password,
                 };
 
                 try {
-                    // Effectuer la requête de connexion
+                    // Effectuer la requï¿½te de connexion
                     const response = await axios.post("https://localhost:44308/Auth/login", loginData);
 
-                    // Si la connexion est réussie, récupérez le jeton
+                    // Si la connexion est rï¿½ussie, rï¿½cupï¿½rez le jeton
                     const token = response.data.token;
 
                     // Sauvegarder le token (dans localStorage par exemple)
                     localStorage.setItem("authToken", token);
 
-                    // Affichez un message de succès ou effectuez une redirection
-                    alert("Connexion réussie !");
+                    // Affichez un message de succï¿½s ou effectuez une redirection
+                    alert("Connexion rï¿½ussie !");
 
                     // Orientation vers la page d'accueil
                     this.goToHome();
@@ -47,7 +47,7 @@
                     // En cas d'erreur, affichez un message d'erreur
                     this.errorMessage = "Identifiants incorrects.";
                 } finally {
-                    // Réactivez le bouton après la connexion
+                    // Rï¿½activez le bouton aprï¿½s la connexion
                     this.isLoading = false;
                 }
             }
